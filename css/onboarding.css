@@ -1,0 +1,123 @@
+body{
+  overflow:hidden;
+}
+
+.image_slider{
+  width:763px;
+  height:350px;
+  overflow:hidden;
+  position:relative;
+  background-color: #000;
+  margin-top: 20px;
+}
+
+.slide {
+  position: absolute;
+  margin-top: 35px;
+  top:0;
+  left:0;
+}
+
+.arrow{
+  position: absolute;
+  z-index: 1002;
+  display: block;
+  top: 50%;
+  margin-top: -35px;
+  width: 36px;
+  height: 71px;
+  outline: none;
+  cursor: pointer;
+  background: url(../assets/img/blank.gif) no-repeat;
+}
+
+.arrow.prev {
+    opacity: 0;
+    left: 20px;
+    background-image: url(../assets/img/paddle_prev_fff.png);
+    transition: 0.2s linear all;
+}
+
+.arrow.next {
+    opacity: 1;
+    right: 20px;
+    background-image: url(../assets/img/paddle_next_fff.png);
+    transition: 0.2s linear all;
+}
+
+.bullet {
+    text-align: center;
+    display: block;
+    position: absolute;
+    z-index: 1002;
+    left: 0;
+    bottom: -4px;
+    right: 0;
+    height: 40px;
+}
+
+.nonDraggableImage{
+    -webkit-user-drag: none;
+}
+.skip{
+  background-color: #000;
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  margin-left: 675px;
+  border:2px #000 solid;
+}
+
+.bullet .wrapper {
+    margin: 0 auto;
+    width: 80%;
+    padding: 1em 0 .8em;
+}
+
+.bullet ul {
+    margin: 0;
+    width: 100%;
+}
+
+.bullet .bullet_dot, .bullet .bullet_dot a {
+    display: inline-block;
+    zoom: 1;
+}
+
+.bullet_dots .bullet_dot {
+    position: relative;
+    margin: 0 8px;
+    width: 12px;
+    height: 12px;
+}
+
+.bullet_dots .bullet_dot a {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 6px;
+    height: 6px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 1px #FFF solid;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.bullet_dots .bullet_dot a.active {
+    background: #FFF;
+}
+
+.slider-header{
+  color: white;
+  font-size: 24px;
+}

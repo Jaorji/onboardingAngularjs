@@ -1,0 +1,25 @@
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/onboarding.css" rel="stylesheet">
+
+<div ng-controller="MainCtrl">
+<div class="container image_slider" >
+  <button class="skip" ng-click="onboardingComplete()" >skip-></button>
+  <div ng-repeat="slide in slides" class="slide slide-animation "
+       ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+       ng-hide="!isCurrentSlideIndex($index)" ng-include = "slide.url">
+  </div>
+   <a class="arrow next" id="next" ng-click="prevSlide()"></a>
+   <a class="arrow prev" id="prev" ng-click="nextSlide()"></a>
+
+ <nav class="bullet">
+   <div class="wrapper">
+     <ul class="bullet_dots">
+       <li class="bullet_dot" ng-repeat="slide in slides">
+         <a ng-class="{'active':isCurrentSlideIndex($index)}"
+            ng-click="setCurrentSlideIndex($index)">{{slide.index}}</a>
+       </li>
+     </ul>
+   </div>
+  </nav>
+</div>
+</div>
