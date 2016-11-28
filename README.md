@@ -1,5 +1,5 @@
 # onboardingAngularjs
-Using Angular.js to build a user onborading.
+Using Angular.js to build a user onboarding.
 
 # Start
 In order to start ,you need reach to your file path and put in:
