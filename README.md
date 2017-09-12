@@ -4,6 +4,10 @@ Using Angular.js to build a user onboarding.
 # Start
 In order to start ,you need reach to your file path and put in:
 ```
+onboarding username$ npm install -g http-server
+```
+After installation, run it:
+```
  onboarding username$ http-server
 ```
 # Usage
